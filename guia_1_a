@@ -1,0 +1,10 @@
+public class guia_1_a {
+    public static void main(String[] args) {
+    int nro_1 = 5;
+    int nro_2 = 14;
+    while(nro_1 <=nro_2){
+        System.out.println(nro_1);
+        nro_1 ++;
+    }
+    }
+}
