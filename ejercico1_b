@@ -1,0 +1,14 @@
+public class ejercico1_b {
+    public static void main (String[] args){
+        int nro_1 = 5;
+        int nro_2 = 14;
+        while(nro_1<=nro_2){
+            if (nro_1 % 2 !=0) {
+                nro_1 ++;
+            }else{
+                System.out.println(nro_1);
+                nro_1 ++;
+            }
+        }
+    }
+}
