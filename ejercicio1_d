@@ -1,0 +1,12 @@
+public class ejercicio1_d {
+    public static void main (String[] args){
+        int nro_1 = 5;
+        int nro_2 = 14;
+        for (int i = 0; i < nro_2; i++){
+            if (nro_2 % 2 == 0 && nro_2>nro_1){
+                System.out.println(nro_2);
+            }
+            nro_2--;
+        }
+    }
+}
