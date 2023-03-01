@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class ejercicio1_c {
+    public static void main(String[] args) {
+        System.out.println("Desea mostrar nros par presione 1 o impar presone 2");
+        int opc;
+        Scanner entradaOpc = new Scanner(System.in);
+        opc = Integer.parseInt(entradaOpc.nextLine());
+
+        int nro_1 = 5;
+        int nro_2 = 14;
+        switch (opc) {
+            case 1:
+                while (nro_1 <= nro_2) {
+                    if (nro_1 % 2 == 0) {
+                        System.out.println(nro_1);
+                    }
+                    nro_1++;
+                }
+            case 2:
+                while (nro_1 <= nro_2) {
+                    if (nro_1 % 2 != 0) {
+                        System.out.println(nro_1);
+                    }
+                    nro_1++;
+                }
+        }
+    }
+}
