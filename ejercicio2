@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class ejercicio2 {
+    public static void main (String[] args){
+        Scanner entradaOpc = new Scanner(System.in);
+        char resp = '2';
+        char cat = 'D';
+        int inmuebles;
+        int vehiculos;
+        boolean lujos;
+        double ingresosMT;
+        System.out.println("Coloque sus ingresos ");
+        ingresosMT = Integer.parseInt((entradaOpc.nextLine()));
+        System.out.println("Coloque inmuebles ");
+        inmuebles = Integer.parseInt(entradaOpc.nextLine());
+        System.out.println("Ingrese vehiculos ");
+        vehiculos = Integer.parseInt(entradaOpc.nextLine());
+        System.out.println("Usted posee algunos lujos");
+        resp = entradaOpc.next().charAt(0);
+        switch (resp){
+            case 'S':
+                lujos = true;
+                break;
+            case 's':
+                lujos = true;
+                break;
+            case 'N':
+                lujos = false;
+                break;
+            case 'n':
+                lujos = false;
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + resp);
+        }
+        System.out.println("\n"+ ingresosMT + "\n" + inmuebles + "\n" + vehiculos + "n" + resp );
+        if (ingresosMT>=572386.50||inmuebles>=3||vehiculos>=3||lujos==true){
+            cat = 'A';
+        }else if (ingresosMT>=163539&&ingresosMT<572386.50||inmuebles<=2||vehiculos<=1||lujos==false){
+            cat = 'M';
+        }else if (ingresosMT<163539||inmuebles==1||vehiculos==0||lujos==false){
+            cat = 'B';
+        }
+        switch (cat){
+            case 'A':
+                System.out.println("Usted pertenece al segmento ingresos ALTOS");
+                break;
+            case 'M':
+                System.out.println("Usted pertenece al segmento ingresos MEDIOS");
+                break;
+            case  'B':
+                System.out.println("Usted pertenece al segmento ingresos BAJOS");
+                break;
+        }
+    }
+}
